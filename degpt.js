@@ -1,5 +1,9 @@
 const { Client, GatewayIntentBits } = require('discord.js');
 const axios = require('axios');
+const express = require('express');
+
+const app = express();
+const port = process.env.PORT || 3000;
 
 const client = new Client({ intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.MessageContent] });
 
@@ -73,3 +77,11 @@ client.on('messageCreate', async message => {
 });
 
 client.login('MTI0MzkyMzMyMzkyNzM5NjM5Mw.GAgt7b.zslX0C8Y0uNX2Rr6QVR6MN4o0fqXod3GbM4G8o');
+
+app.get('/', (req, res) => {
+    res.send('Bot de Discord está ejecutándose.');
+});
+
+app.listen(port, () => {
+    console.log(`Servidor de backend escuchando en el puerto ${port}`);
+});
