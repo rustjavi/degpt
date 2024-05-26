@@ -85,7 +85,7 @@ client.on('messageCreate', async message => {
     }
 });
 
-client.login('MTI0MzkyMzMyMzkyNzM5NjM5Mw.GAgt7b.zslX0C8Y0uNX2Rr6QVR6MN4o0fqXod3GbM4G8o');
+client.login('MTI0MzkyMzMyMzkyNzM5NjM5Mw.GJv3VT.2_Dy35552wF9VYzV3zDl-lkh4gnFq3tTVKowUs');
 
 app.get('/', (req, res) => {
     res.send('Bot de Discord está ejecutándose.');
